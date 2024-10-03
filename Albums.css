@@ -1,0 +1,1423 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: left;
+    align-items: center;
+    background: black;
+    font-family: 'Lulo Clean one', sans-serif;
+}
+  
+nav {
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 2.5px;
+    background-color: #101010;
+    list-style-type: none;
+    margin: 0;
+    padding: 1px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+  
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.nav-links li {
+    padding: 5px 105px;
+}
+  
+.nav-links li a {
+    text-align: center;
+    text-decoration: none;
+    color: #CFB6BC;
+}
+  
+.nav-links li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+}
+  
+.nav-links li a:hover::after {
+    width: 100%;
+    transition: width 0.15s linear;
+    margin-top: 6px;
+}
+  
+.nav-links li a:hover {
+    color: white;
+}
+  
+.homeIcon img {
+    width: 70px;
+    height: 70px;
+    margin-top: -5px;
+}
+
+
+
+.sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+  
+  /* Flex Container Styles */
+.flex-container {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+}
+  
+.textCon{
+    margin-top: 60px;
+    flex: 1;
+    max-width: 500px;
+    padding: 0 30px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+}
+
+.music-player {
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+  
+.music-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+  
+.artist-name {
+    font-size: 15px;
+}
+  
+  .music-name,
+  .artist-name {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk {
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+  
+.disk.play {
+    animation-play-state: running;
+}
+  
+.disk::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+}
+  
+.song-slider {
+    width: 100%;
+    position: relative;
+}
+  
+.seek-bar {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+  
+.current-time,
+.song0duration {
+    font-size: 14px;
+}
+  
+.song-duration {
+    position: absolute;
+    right: 0;
+}
+  
+.controls {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+  
+  .play-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+  }
+  
+.play-btn span {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+  
+.play-btn span:nth-child(2) {
+    left: 55%;
+    transform-origin: center;
+}
+  
+.play-btn.pause span:nth-child(2) {
+    transform: translateY(-50%) scaleY(0);
+}
+  
+.play-btn.pause span:nth-child(1) {
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+  
+.play-btn.pause {
+    animation: pulse 2s linear infinite;
+}
+  
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+  
+.btn {
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container2 {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+    order: 2;
+}
+
+.textCon2{
+    margin-top: 60px;
+    flex: 1;
+    max-width: 500px;
+    padding-right: 80px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+  }
+
+.music-player2{
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.music-name2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist-name2{
+    font-size: 15px;
+}
+
+.music-name2,
+.artist-name2{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk2{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk2.play{
+    animation-play-state: running;
+}
+
+.disk2::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+
+}
+
+.song-slider2{
+    width:100%;
+    position: relative;
+}
+
+.seek-bar2{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar2::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+
+.current-time2,
+.song0duration2{
+    font-size: 14px;
+}
+
+.song-duration2{
+    position:absolute;
+    right:0;
+}
+
+.controls2{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play-btn2{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+}
+
+.play-btn2 span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn2 span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn2.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn2.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn2.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.btn2{
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sec3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container3 {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+}
+
+.textCon3{
+    margin-top: 60px;
+    flex: 1;
+    max-width: 500px;
+    padding: 0 30px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+  }
+
+.music-player3{
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.music-name3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist-name3{
+    font-size: 15px;
+}
+
+.music-name3,
+.artist-name3{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk3{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk3.play{
+    animation-play-state: running;
+}
+
+.disk3::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+
+}
+
+.song-slider3{
+    width:100%;
+    position: relative;
+}
+
+.seek-bar3{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar3::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+
+.current-time3,
+.song0duration2{
+    font-size: 14px;
+}
+
+.song-duration3{
+    position:absolute;
+    right:0;
+}
+
+.controls3{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play-btn3{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+}
+
+.play-btn3 span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn3 span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn3.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn3.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn3.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.btn3{
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sec4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container4 {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+    order: 2;
+}
+
+.textCon4{
+    margin-top: 60px;
+    flex: 1;
+    max-width: 500px;
+    padding-right: 80px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+  }
+
+.music-player4{
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.music-name4{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist-name4{
+    font-size: 15px;
+}
+
+.music-name4,
+.artist-name4{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk4{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk4.play{
+    animation-play-state: running;
+}
+
+.disk4::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+
+}
+
+.song-slider4{
+    width:100%;
+    position: relative;
+}
+
+.seek-bar4{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar4::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+
+.current-time4,
+.song0duration2{
+    font-size: 14px;
+}
+
+.song-duration4{
+    position:absolute;
+    right:0;
+}
+
+.controls4{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play-btn4{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+}
+
+.play-btn4 span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn4 span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn4.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn4.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn4.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.btn4{
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sec5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container5 {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+}
+
+.textCon5{
+    margin-top: 80px;
+    flex: 1;
+    max-width: 500px;
+    padding: 0 30px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+}
+
+
+
+.music-player5{
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.music-name5{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist-name5{
+    font-size: 15px;
+}
+
+.music-name5,
+.artist-name5{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk5{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk5.play{
+    animation-play-state: running;
+}
+
+.disk5::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+
+}
+
+.song-slider5{
+    width:100%;
+    position: relative;
+}
+
+.seek-bar5{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar5::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+
+.current-time5,
+.song0duration2{
+    font-size: 14px;
+}
+
+.song-duration5{
+    position:absolute;
+    right:0;
+}
+
+.controls5{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play-btn5{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+}
+
+.play-btn5 span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn5 span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn5.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn5.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn5.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.btn5{
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sec6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container6 {
+    padding-top: 80px;
+    display: flex;
+    background-color: #000000;
+    height: 700px;
+    align-items: center;
+    position: relative; /* Add this line */
+    flex: 1;
+    order: 2;
+}
+
+.textCon6{
+    margin-top: 90px;
+    flex: 1;
+    max-width: 500px;
+    padding-right: 80px;
+    color: #CFB6BC;
+    font-size: 16px;
+    font-family: "Fraunces", sans-serif;
+    text-align: justify;
+  }
+
+.music-player6{
+    width: 350px;
+    height: 550px;
+    background: #101010;
+    border: 0 40px 100px;
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.music-name6{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist-name6{
+    font-size: 15px;
+}
+
+.music-name6,
+.artist-name6{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.disk6{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    background-image: url('ABBA/Albums/RingRing_cover.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk6.play{
+    animation-play-state: running;
+}
+
+.disk6::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+
+}
+
+.song-slider6{
+    width:100%;
+    position: relative;
+}
+
+.seek-bar6{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #cfb6bc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.seek-bar6::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #9c757e;
+}
+
+.current-time6,
+.song0duration2{
+    font-size: 14px;
+}
+
+.song-duration6{
+    position:absolute;
+    right:0;
+}
+
+.controls6{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.play-btn6{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #CFB6BC;
+    cursor: pointer;
+    border: none;
+}
+
+.play-btn6 span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #9c757e;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn6 span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn6.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn6.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn6.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+
+.btn6{
+    width: 40px;
+    height: 40px;
+    background: #cfb6bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer{
+    background-color: #101010;
+    color:#CFB6BC;
+    font-family: 'Lulo Clean One', sans-serif;
+    width: 1470px;
+    padding: 100px 15%;
+    margin-top: 100px;
+}
+
+.footer div {
+    text-align: center;
+    float: left;
+    width: 33.33%;
+}
+
+
+.footer div h3{
+    font-weight: bold;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
+
+.col1 a{
+    display: block;
+    text-decoration: none;
+    color: #CFB6BC;
+    margin-bottom: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.col1 a:hover{
+    color: white;
+}
+
+.col2 form input{
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+}
+
+.col2 form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.col2 form button:hover{
+    background-color: #BAA3A9;
+    transition: 1 ease;
+}
+
+.col3 i{
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.popup{
+    width: 400px;
+    background: #353839;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 20%;
+    left: 50;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: white;
+    visibility: hidden;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.open-popup{
+    visibility: visible;
+    bottom: 20%;
+    transform: translate(-15%, 1660%) scale(0.9);
+    opacity: 1;
+}
+
+.popup i{
+    margin-top: 40px;
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.popup p{
+    margin-bottom: -10px;
+    font-size: 18px;
+}
+
+.col2 form .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2) ;
+}

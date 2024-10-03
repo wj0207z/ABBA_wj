@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOME</title>
+
+    <link rel="stylesheet" href="HomeSS.css">
+    <link href="https://fonts.cdnfonts.com/css/lulo-clean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce9f1bb389.js" crossorigin="anonymous"></script>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="biography.html">BIOGRAPHY</a></li>
+        <li><a href="tour.html">TOUR</a></li>
+        <li class="homeIcon"><a href="#">
+          <img src="ABBA/HomePage/Sababba_by_jrotem-removebg-preview.png">
+        </a></li>
+        <li><a href="albums.html">ALBUMS</a></li>
+        <li><a href="newsroom.html">NEWSROOM</a></li>
+      </ul>
+    </nav>
+  </head>
+
+<body>
+  <div>
+      <img src="ABBA/HomePage/band wallpaper.jpg" alt="ABBA1" height="850px" width="100%">
+  </div>
+
+  <div class="container">
+    <div class="postCon">
+      <div class="ABBApost" style= "background-image: url(ABBA/HomePage/ABBAwallpapers.jpeg) ;">
+        <h1 class="postHeader">
+          THE TIMELESS POP LEGENDS WHO RULED THE MUSIC WORLD
+        </h1>
+        <p class="postText">
+          Embark on a Musical Journey Through ABBA's Timeless Legacy
+        </p>
+        <form onsubmit="return sendMessage(event)">
+          <button onclick="Toggle1()" id="like" class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <script>
+            var btnvar1 = document.getElementById('like')
+
+            function Toggle1(){
+              if (btnvar1.style.color == 'red'){
+                (btnvar1.style.color = 'grey')
+              }
+              else{
+                (btnvar1.style.color = 'red')
+              }
+            }
+
+            function sendMessage(event) {
+              event.preventDefault(); // Prevent the default form submission behavior
+              // Your code to handle sending the message goes here
+              // For now, let's just log a message to the console
+              console.log("Message sent!");
+              return false; // Return false to prevent the form submission
+            }
+          </script>
+        </form>
+      </div>
+
+      <div class="ABBApost2" style="background-image: url(ABBA/HomePage/ezgif.com-gif-maker.jpg);">
+        <h1 class="postHeader">
+          ABBA FEVER SWEPS THE NATION
+        </h1>
+        <p class="postText">
+          Experience the Ultimate Pop Sensation
+        </p>
+        <form onsubmit="return sendMessage(event)">
+          <button onclick="Toggle2()" id="like2" class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <script>
+            var btnvar2 = document.getElementById('like2')
+
+            function Toggle2(){
+              if (btnvar2.style.color == 'red'){
+                (btnvar2.style.color = 'grey')
+              }
+              else{
+                (btnvar2.style.color = 'red')
+              }
+            }
+
+            function sendMessage(event) {
+              event.preventDefault(); // Prevent the default form submission behavior
+              // Your code to handle sending the message goes here
+              // For now, let's just log a message to the console
+              console.log("Message sent!");
+              return false; // Return false to prevent the form submission
+            }
+          </script>
+        </form>
+      </div>
+
+      <div class="ABBApost2" style="background-image: url(ABBA/HomePage/s-l1200.jpg);">
+        <h1 class="postHeader">
+          UNLEASH YOUR INNER DISCO DIVA
+        </h1>
+        <p class="postText">
+          ABBA's Infectious Beats Await
+        </p>
+        <form onsubmit="return sendMessage(event)">
+          <button onclick="Toggle3()" id="like3" class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <script>
+            var btnvar3 = document.getElementById('like3')
+
+            function Toggle3(){
+              if (btnvar3.style.color == 'red'){
+                (btnvar3.style.color = 'grey')
+              }
+              else{
+                (btnvar3.style.color = 'red')
+              }
+            }
+
+            function sendMessage(event) {
+              event.preventDefault(); // Prevent the default form submission behavior
+              // Your code to handle sending the message goes here
+              // For now, let's just log a message to the console
+              console.log("Message sent!");
+              return false; // Return false to prevent the form submission
+            }
+          </script>
+        </form>
+      </div>
+
+      <div class="ABBApost2" style="background-image: url(ABBA/HomePage/best-deepcut-abba-songs-sheffield.webp);">
+        <h1 class="postHeader">
+          ABBA-MANIA STRIKES AGAIN
+        </h1>
+        <p class="postText">
+          Prepare for an Unforgettable Musical Journey
+        </p>
+        <form onsubmit="return sendMessage(event)">
+          <button onclick="Toggle4()" id="like4" class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <script>
+            var btnvar4 = document.getElementById('like4')
+
+            function Toggle4(){
+              if (btnvar4.style.color == 'red'){
+                (btnvar4.style.color = 'grey')
+              }
+              else{
+                (btnvar4.style.color = 'red')
+              }
+            }
+
+            function sendMessage(event) {
+              event.preventDefault(); // Prevent the default form submission behavior
+              // Your code to handle sending the message goes here
+              // For now, let's just log a message to the console
+              console.log("Message sent!");
+              return false; // Return false to prevent the form submission
+            }
+          </script>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="chatCon">
+        <div class="chatHead">
+          <h1>CHAT WITH US</h1>
+        </div>
+        
+        <div class="chatBody" id="chatBody">
+          <p class="message">Hey there! How can I assist you?</p>
+        </div>
+
+        <div class="chatFooter">
+          <form onsubmit="return sendMessage(event)">
+            <input type="text" id="userMessageInput" placeholder="Type your message here..." required>
+            <button type="submit">SEND</button>
+
+            <script>
+              function sendMessage(event) {
+                  event.preventDefault();
+
+                  const userMessageInput = document.getElementById('userMessageInput');
+                  const userMessage = userMessageInput.value.trim();
+
+                  if (userMessage === '') {
+                  // If the user message is empty, do not send anything and display an error message
+                  displayMessage('Please enter a message.', 'user');
+                  return false;
+                  }
+
+                  // If the user message is not empty, send the message and display it in the chat
+                  displayMessage(userMessage, 'user');
+                  displayMessage("Message Received!", 'bot');
+                  // Reset the input field
+                  userMessageInput.value = '';
+
+                  return false;
+              }
+
+              function displayMessage(message, sender) {
+                  const chatBody = document.getElementById('chatBody');
+                  const messageElement = document.createElement('p');
+                  messageElement.textContent = message;
+                  messageElement.classList.add('message');
+
+                  if (sender === 'user') {
+                  messageElement.classList.add('userMessage');
+                  }
+
+                  chatBody.appendChild(messageElement);
+                  chatBody.scrollTop = chatBody.scrollHeight;
+              }
+            </script>
+          </form>
+        </div>
+    </div>
+  </div>
+   
+  <div class="footer">
+    <div class="col1">
+      <h3>MORE ABOUT US</h3>
+      <a href="home.html">HOME</a>
+      <a href="biography.html">BIOGRAPHY</a>
+      <a href="tour.html">TOUR</a>
+      <a href="albums.html">ALBUMS</a>
+      <a href="newsroom.html">NEWSROOM</a>
+    </div>
+
+    <div class="col2">
+      <h3>NEWSLETTER</h3>
+      <form onsubmit="return sendMessage(event)">
+        <input type="email" id="emailInput" placeholder="Your Email Address" required>
+        <br>
+        <button type="submit" class="btn1" onclick="validateAndShowPopup()">SIGN UP NOW</button>
+        <div class="popup" id="popup">
+            <i class="fa-solid fa-circle-check fa-2xl" style="color: #77bb41;"></i>
+            <h2>THANK YOU!</h2>
+            <p>You have succesfully signed up.</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+
+        <script>
+          let popup = document.getElementById("popup");
+
+          function openPopup(){
+              popup.classList.add("open-popup");
+          }
+
+          function closePopup(){
+              popup.classList.remove("open-popup");
+          }
+
+          function sendMessage(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            // Your code to handle sending the message goes here
+            // For now, let's just log a message to the console
+            console.log("Message sent!");
+            return false; // Return false to prevent the form submission
+          }
+
+          function validateAndShowPopup() {
+            const emailInput = document.getElementById("emailInput");
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                 alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+
+              // If input is not empty, show the popup
+              openPopup();
+          }
+        </script>
+      </form>
+    </div>
+
+    <div class="col3">
+      <h3>CONTACTS</h3>
+      <a href="https://www.facebook.com/ABBA" target="_blank">
+        <i class="fa-brands fa-square-facebook fa-xl" style="color: #CFB6BC;"></i>
+      </a>
+      
+      <a href="https://www.instagram.com/abba/" target="_blank">
+        <i class="fa-brands fa-square-instagram fa-xl" style="color: #CFB6BC;"></i>
+      </a>
+
+      <a href="https://twitter.com/ABBA" target="_blank">
+        <i class="fa-brands fa-square-twitter fa-xl" style="color: #CFB6BC;"></i>
+      </a>
+    </div>
+
+</body>
+</html>
+
+
+
+

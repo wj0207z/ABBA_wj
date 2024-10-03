@@ -1,0 +1,517 @@
+nav {
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 2.5px;
+    background-color: #101010;
+    list-style-type: none;
+    margin: 0;
+    padding: 1px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.nav-links li {
+    padding: 5px 105px;
+}
+  
+.nav-links li a {
+    text-align: center;
+    text-decoration: none;
+    color: #CFB6BC;
+}
+  
+.nav-links li a::after{
+    content: '';
+    width: 0;
+    height: 3px; 
+    background-color: white;
+    margin: auto;
+    display: block;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    transition: width 0.15s linear;
+    margin-top: 6px;
+}
+
+.nav-links li a:hover{
+    color: white;
+}
+
+.homeIcon img{
+    width: 70px;
+    height: 70px;
+    margin-top: -5px;
+}
+
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.Sec1{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.imgBox {
+    flex: 1; 
+    order: 2;
+}
+
+.imgBox img{
+    width: 545px;
+    height: 545px;
+    display: block;
+    margin: 0 auto;
+    margin-left: 85px;
+
+}
+
+.textCon{
+    flex: 1;
+    max-width: 492px;
+    padding-left: 250px;
+}
+
+.textCon h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 7px;
+    color: #CFB6BC;
+}
+
+.textCon p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Fraunces';
+    text-align: justify;
+    margin-top: 45px;
+}
+
+.Sec2{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.imgBox2 {
+    flex: 1; 
+    order: 2;
+}
+
+.imgBox2 img{
+    width: 545px;
+    height: 394px;
+    display: block;
+    margin: 0 auto;
+    margin-left: 120px;
+}
+
+.textCon2{
+    flex: 1;
+    max-width: 492px;
+    padding-left: 250px; 
+}
+
+.textCon2 h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 8px;
+    color: #CFB6BC;
+    
+}
+
+.textCon2 p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Fraunces';
+    text-align: justify;
+    margin-top: 45px;
+}
+
+.Sec3{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.imgBox3 {
+    flex: 1; 
+}
+
+.imgBox3 img{
+    width: 368px;
+    height: 471px;
+    display: block;
+    margin: 0 auto;
+    margin-right: 200px;
+}
+
+.textCon3{
+    flex: 1;
+    max-width: 492px;
+    padding-right: 150px; 
+}
+
+.textCon3 h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 8px;
+    color: #CFB6BC;
+    text-align: right;
+    
+}
+
+.textCon3 p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Fraunces';
+    text-align: justify;
+    margin-top: 45px;
+}
+
+.Sec4{
+    display: flex;
+    align-items: center;
+}
+
+.imgBox4 {
+    flex: 1; 
+    order: 2;
+}
+
+.imgBox4 img{
+    width: 400px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    margin-left: 140px;
+    margin-bottom: 150px;
+}
+
+.textCon4{
+    flex: 1;
+    max-width: 492px;
+    padding-left: 250px; 
+}
+
+.textCon4 h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 8px;
+    color: #CFB6BC;
+}
+
+.textCon4 p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Fraunces';
+    text-align: justify;
+    margin-top: 60px;
+}
+
+.Sec5{
+    display: flex;
+    align-items: center;
+}
+
+.imgBox5 {
+    flex: 1; 
+}
+
+.imgBox5 img{
+    width: 323px;
+    height: 467px;
+    display: block;
+    margin: 0 auto;
+    margin-right: 200px;
+}
+
+.textCon5{
+    flex: 1;
+    max-width: 492px;
+    padding-right: 150px;
+}
+
+.textCon5 h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: 7px;
+    color: #CFB6BC;
+    text-align: right;
+}
+
+.textCon5 p{
+    color: white;
+    font-size: 25px;
+    font-family: 'Fraunces';
+    text-align: justify;
+    margin-top: 45px;
+}
+
+.Sec6{
+    margin-top: 100px;
+}
+
+.Sec6 h1{
+    font-family: 'Lulo Clean One', sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    letter-spacing: 7px;
+    color: #fff;
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+
+.scrollContainer {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin: auto;
+    padding-top: 0px;
+}
+
+.UScon{
+    max-width: 100%;
+    width: fit-content; /* Adjust the width based on the content */
+    padding: 20px 0;
+}
+
+.imgGal{
+    display: flex;
+    gap: 8px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.img1 img{
+    width: 240px;
+    height: 420px;
+    object-fit: cover;
+}
+
+.img2 img{
+    width: 240px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.img3 img{
+    width: 465px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.img4 img{
+    width: 465px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.img5 img{
+    width: 600px;
+    height: 345px;
+    object-fit: cover;
+}
+
+.img6 img{
+    height: 225px;
+    width: 225px;
+}
+
+.img7 img{
+    height: 225px;
+    width: 363px;
+}
+
+.img67 {
+    display: flex; /* Set the img67 container to flex */
+    gap: 8px; /* Add some gap between img6 and img7 */
+}
+
+.img8 img{
+    height: 225px;
+    width: 367.5px;
+}
+
+.img9 img{
+    height: 225px;
+    width: 292.5px;
+}
+
+.img10 img{
+    width: 675px;
+    height: 345px;
+    object-fit: cover;
+}
+
+.img89 {
+    display: flex; /* Set the img67 container to flex */
+    gap: 8px; /* Add some gap between img6 and img7 */
+}
+
+.img11 img{
+    height: 285px;
+    width: 405px;
+}
+
+.img12 img{
+    height: 285px;
+    width: 405px;
+}
+
+.img13 img{
+    height: 255px;
+    width: 375px;
+}
+
+.img14 img{
+    height: 315px;
+    width: 375px;
+}
+
+.footer{
+    background-color: #101010;
+    color:#CFB6BC;
+    font-family: 'Lulo Clean One', sans-serif;
+    max-width: 1470px;
+    padding: 100px 15%;
+    display: flex;
+    margin-top: 100px;
+}
+
+.footer div {
+    text-align: center;
+    float: left;
+    width: 33.33%;
+}
+
+
+.footer div h3{
+    font-weight: bold;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
+
+.col1 a{
+    display: block;
+    text-decoration: none;
+    color: #CFB6BC;
+    margin-bottom: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.col1 a:hover{
+    color: white;
+}
+
+.col2 form input{
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+}
+
+.col2 form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.col2 form button:hover{
+    background-color: #BAA3A9;
+    transition: 1 ease;
+}
+
+.col3 i{
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.popup{
+    width: 400px;
+    background: #353839;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 20%;
+    left: 50;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: white;
+    visibility: hidden;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.open-popup{
+    visibility: visible;
+    bottom: 20%;
+    transform: translate(-20%, 1250%) scale(0.9);
+    opacity: 1;
+}
+
+.popup i{
+    margin-top: 40px;
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.popup p{
+    margin-bottom: -10px;
+    font-size: 18px;
+}
+
+.col2 form .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2) ;
+}

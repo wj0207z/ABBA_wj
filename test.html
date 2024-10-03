@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOME</title>
+
+    <link rel="stylesheet" href="homeSStest.css">
+    <link href="https://fonts.cdnfonts.com/css/lulo-clean" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce9f1bb389.js" crossorigin="anonymous"></script>
+
+
+  </head>
+
+<body>
+
+  <div class="footer">
+    <div class="col1">
+      <h3>MORE ABOUT US</h3>
+      <a href="home.html">HOME</a>
+      <a href="biography.html">BIOGRAPHY</a>
+      <a href="tour.html">TOUR</a>
+      <a href="#">ALBUMS</a>
+      <a href="newsroom.html">NEWSROOM</a>
+    </div>
+
+    <div class="col2">
+      <h3>NEWSLETTER</h3>
+      <form onsubmit="return sendMessage(event)">
+        <input type="email" id="emailInput" placeholder="Your Email Address" required>
+        <br>
+        <button type="submit" class="btn1" onclick="validateAndShowPopup()">SIGN UP NOW</button>
+        <div class="popup" id="popup">
+            <i class="fa-solid fa-circle-check fa-2xl" style="color: #77bb41;"></i>
+            <h2>THANK YOU!</h2>
+            <p>You have succesfully signed up.</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+
+        <script>
+          let popup = document.getElementById("popup");
+
+          function openPopup(){
+              popup.classList.add("open-popup");
+          }
+
+          function closePopup(){
+              popup.classList.remove("open-popup");
+          }
+
+          function sendMessage(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            // Your code to handle sending the message goes here
+            // For now, let's just log a message to the console
+            console.log("Message sent!");
+            return false; // Return false to prevent the form submission
+          }
+
+          function validateAndShowPopup() {
+            const emailInput = document.getElementById("emailInput");
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                 alert("Please enter a valid email address.");
+                return false; // Prevent form submission
+            }
+
+              // If input is not empty, show the popup
+              openPopup();
+          }
+        </script>
+      </form>
+    </div>
+
+    <div class="col3">
+      <h3>CONTACTS</h3>
+      <i class="fa-brands fa-square-facebook fa-xl" style="color: #CFB6BC;"></i>
+      <i class="fa-brands fa-square-instagram fa-xl" style="color: #CFB6BC;"></i>
+      <i class="fa-brands fa-square-twitter fa-xl" style="color: #CFB6BC;"></i>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+

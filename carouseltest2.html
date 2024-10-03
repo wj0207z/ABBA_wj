@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-wrapper {
+            height: 850px;
+            width: 100%;
+            display: block;
+            margin: 50px auto;
+            border: 2px solid black;
+            position: relative; /* Added position */
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 50px;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 12px;
+            position: absolute; /* Added position */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .arrow-prev {
+            left: 0; /* Changed left to 0 */
+            transform: rotate(135deg);
+        }
+
+        .arrow-next {
+            right: 0; /* Changed left to right */
+            transform: rotate(-45deg);
+        }
+
+        [id^="item"] {
+            display: none;
+        }
+
+        .item1 {
+            z-index: 2;
+            opacity: 1;
+            background: url('ABBA/HomePage/band wallpaper.jpg');
+            background-size: cover;
+        }
+
+        .item2 {
+            background: url('ABBA/HomePage/ezgif.com-gif-maker.jpg');
+            background-size: cover;
+        }
+
+        .item3 {
+            background: url('ABBA/HomePage/EhMAuWcXcAApZO5.jpeg');
+            background-size: cover;
+        }
+
+        *:target ~ .item1 {
+            opacity: 0;
+        }
+
+        #item1:target ~ .item1 {
+            opacity: 1;
+        }
+
+        #item2:target ~ .item2,
+        #item3:target ~ .item3 {
+            z-index: 3;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class = "carousel-wrapper">
+        <span id = "item1"></span>
+        <span id = "item2"></span>
+        <span id = "item3"></span>
+        <div class="carousel-item item1">
+            <a href="#item3" class="arrow-prew arrow"></a>
+            <a href="#item2" class="arrow-next arrow"></a>
+        </div>
+
+        <div class="carousel-item item2">
+            <a href="#item1" class="arrow-prew arrow"></a>
+            <a href="#item3" class="arrow-next arrow"></a>
+        </div>
+
+        <div class="carousel-item item3">
+            <a href="#item2" class="arrow-prew arrow"></a>
+            <a href="#item1" class="arrow-next arrow"></a>
+        </div>
+
+    </div>
+    
+</body>
+</html>
